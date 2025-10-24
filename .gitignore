@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+angr-env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ghidra
+/tmp/ghidra_projects/
+*.gpr
+*.rep/
+*.lock
+
+# Results (keep directory structure but ignore logs)
+results/*.log
+results/*.csv
+results/*.txt
+
+# Samples - ignore actual malware but keep benign samples
+samples/malware/
+samples/*.exe
+samples/*.dll
+samples/*.so
+!samples/benign/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
