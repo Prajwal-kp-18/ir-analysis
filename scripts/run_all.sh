@@ -24,7 +24,7 @@
 
 # Directory containing the binary samples to analyze
 # Default: samples/benign/ relative to project root
-SAMPLES_DIR="${SAMPLES_DIR:-$(dirname "$(dirname "$(readlink -f "$0")")")/samples/benign}"
+SAMPLES_DIR="${SAMPLES_DIR:-$(dirname "$(dirname "$(readlink -f "$0")")")/samples/malware}"
 
 # Directory where results and logs will be written
 # Default: results/ relative to project root
@@ -38,8 +38,7 @@ CSV_SUMMARY="${CSV_SUMMARY:-summary.csv}"
 
 # Path to Ghidra installation (required by analyze_ghidra.sh)
 # This can also be set as an environment variable before running this script
-GHIDRA_INSTALL_DIR="${GHIDRA_INSTALL_DIR:-/opt/ghidra}"
-
+GHIDRA_INSTALL_DIR="/home/analyst/ghidra"
 # ============================================================================
 # SCRIPT SETUP
 # ============================================================================

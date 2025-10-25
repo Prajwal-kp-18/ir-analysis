@@ -1,0 +1,2321 @@
+IR Lifting Benchmark Results
+Started: Sat Oct 25 09:14:05 AM IST 2025
+========================================
+
+========================================
+Processing sample 1: 0243bae0.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/0243bae0.elf
+Project: ghidra_analysis_0243bae0.elf_20251025_091405
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (2077 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (5571 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_0243bae0.elf_20251025_091405 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_0243bae0.elf_20251025_091405 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_0243bae0.elf_20251025_091405 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/0243bae0.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: ARM:LE:32:v8:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/0243bae0.elf?MD5=d417afefad512f9cb60d5840eed09e6d...
+Unsupported Thread-Local Symbol not loaded: $d
+Unsupported Thread-Local Symbol not loaded: __libc_errno
+Unsupported Thread-Local Symbol not loaded: errno
+Unsupported Thread-Local Symbol not loaded: __libc_h_errno
+Unsupported Thread-Local Symbol not loaded: h_errno
+Unsupported Thread-Local Symbol not loaded: __libc_resp
+Unsupported Thread-Local Symbol not loaded: __resp
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/0243bae0.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/0243bae0.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /0243bae0.elf (ghidra_analysis_0243bae0.elf_20251025_091405:/0243bae0.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/0243bae0.elf"
+	User time (seconds): 23.30
+	System time (seconds): 1.36
+	Percent of CPU this job got: 160%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 287244
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 94592
+	Voluntary context switches: 7746
+	Involuntary context switches: 10466
+	Swaps: 0
+	File system inputs: 2560
+	File system outputs: 7816
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/0243bae0.elf
+==================================================
+Loading binary with angr...
+Architecture: ARMEL
+Entry point: 0x8194
+Binary base address: 0x8000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 934
+Basic blocks (CFG nodes): 8369
+
+Sample functions (first 10):
+  - _init @ 0x80d4
+  - __do_global_dtors_aux @ 0x80f0
+  - frame_dummy @ 0x8134
+  - _start @ 0x8194
+  - sub_81c0 @ 0x81c0
+  - attack_get_opt_str @ 0x81d0
+  - attack_start @ 0x822c
+  - attack_get_opt_ip @ 0x832c
+  - attack_get_opt_int @ 0x8398
+  - attack_parse @ 0x8408
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/0243bae0.elf"
+	User time (seconds): 16.78
+	System time (seconds): 0.37
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 200828
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 35
+	Minor (reclaiming a frame) page faults: 45661
+	Voluntary context switches: 38
+	Involuntary context switches: 618
+	Swaps: 0
+	File system inputs: 9224
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 0243bae0.elf
+
+========================================
+Processing sample 2: 1885f84a.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/1885f84a.elf
+Project: ghidra_analysis_1885f84a.elf_20251025_091438
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1105 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (3600 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_1885f84a.elf_20251025_091438 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_1885f84a.elf_20251025_091438 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_1885f84a.elf_20251025_091438 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/1885f84a.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: x86:LE:64:default:gcc (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/1885f84a.elf?MD5=f07983c7bd1936deb7c67b39becd5b72...
+Skipping zero-length segment [1,Loadable segment] at address ram:0053b480
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/1885f84a.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/1885f84a.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /1885f84a.elf (ghidra_analysis_1885f84a.elf_20251025_091438:/1885f84a.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/1885f84a.elf"
+	User time (seconds): 13.15
+	System time (seconds): 0.90
+	Percent of CPU this job got: 154%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 272884
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 91861
+	Voluntary context switches: 6631
+	Involuntary context switches: 7330
+	Swaps: 0
+	File system inputs: 136
+	File system outputs: 4456
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/1885f84a.elf
+==================================================
+Loading binary with angr...
+Architecture: AMD64
+Entry point: 0x10f6a8
+Binary base address: 0x100000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 4558
+Basic blocks (CFG nodes): 7367
+
+Sample functions (first 10):
+  - sub_100000 @ 0x100000
+  - sub_100062 @ 0x100062
+  - sub_100080 @ 0x100080
+  - sub_1000e0 @ 0x1000e0
+  - sub_1000e9 @ 0x1000e9
+  - sub_1000f8 @ 0x1000f8
+  - sub_100110 @ 0x100110
+  - sub_100119 @ 0x100119
+  - sub_10011b @ 0x10011b
+  - sub_10013c @ 0x10013c
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+WARNING  | 2025-10-25 09:14:49,146 | cle.backends.elf.elf | Segment PT_LOAD is empty at 0x53b480!
+ERROR    | 2025-10-25 09:14:50,445 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_OUT.
+ERROR    | 2025-10-25 09:14:51,709 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_IN.
+ERROR    | 2025-10-25 09:14:52,689 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_FNSAVE.
+WARNING  | 2025-10-25 09:14:54,169 | angr.analyses.cfg.indirect_jump_resolvers.amd64_elf_got | Address -841593514s not mapped.
+ERROR    | 2025-10-25 09:14:54,791 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_storeF80le.
+WARNING  | 2025-10-25 09:14:55,536 | angr.analyses.cfg.indirect_jump_resolvers.amd64_elf_got | Address -866592763s not mapped.
+ERROR    | 2025-10-25 09:14:57,784 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_loadF80le.
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/1885f84a.elf"
+	User time (seconds): 18.66
+	System time (seconds): 0.39
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 198140
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5
+	Minor (reclaiming a frame) page faults: 44778
+	Voluntary context switches: 6
+	Involuntary context switches: 606
+	Swaps: 0
+	File system inputs: 648
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 1885f84a.elf
+
+========================================
+Processing sample 3: 2acc0000.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/2acc0000.elf
+Project: ghidra_analysis_2acc0000.elf_20251025_091506
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1182 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (3273 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_2acc0000.elf_20251025_091506 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_2acc0000.elf_20251025_091506 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_2acc0000.elf_20251025_091506 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/2acc0000.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: 68000:BE:32:Coldfire:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/2acc0000.elf?MD5=5a40dfa804cd06843c2f1fc2db9fd7a8...
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/2acc0000.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/2acc0000.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /2acc0000.elf (ghidra_analysis_2acc0000.elf_20251025_091506:/2acc0000.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/2acc0000.elf"
+	User time (seconds): 11.40
+	System time (seconds): 0.84
+	Percent of CPU this job got: 147%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 250080
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 87645
+	Voluntary context switches: 6017
+	Involuntary context switches: 7058
+	Swaps: 0
+	File system inputs: 544
+	File system outputs: 4552
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/2acc0000.elf
+==================================================
+Loading binary with angr...
+Architecture: 68000:BE:32:default
+Entry point: 0x80000144
+Binary base address: 0x80000000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 374
+Basic blocks (CFG nodes): 5807
+
+Sample functions (first 10):
+  - LinuxLoader @ 0x0
+  - UnresolvableJumpTarget @ 0x4c
+  - UnresolvableCallTarget @ 0x50
+  - sub_80000094 @ 0x80000094
+  - sub_800000a8 @ 0x800000a8
+  - sub_800000f6 @ 0x800000f6
+  - sub_800000fe @ 0x800000fe
+  - sub_8000013c @ 0x8000013c
+  - _start @ 0x80000144
+  - sub_8000016c @ 0x8000016c
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+WARNING  | 2025-10-25 09:15:16,520 | angr.factory   | Creating project with the experimental 'UberEnginePcode' engine
+WARNING  | 2025-10-25 09:15:16,791 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:16,870 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:16,881 | angr.ailment.converter_pcode | Unsupported opcode: CALLOTHER emulation not currently supported
+WARNING  | 2025-10-25 09:15:16,885 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:17,047 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:17,051 | angr.ailment.converter_pcode | Unsupported opcode: CALLOTHER emulation not currently supported
+WARNING  | 2025-10-25 09:15:17,056 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:17,171 | angr.analyses.cfg.indirect_jump_resolvers.jumptable | JumpTableResolver does not support P-Code IR yet; CFG may be incomplete.
+WARNING  | 2025-10-25 09:15:17,262 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:17,384 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:17,465 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:18,006 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:18,006 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,007 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,009 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,010 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,012 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,013 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,016 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,016 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,146 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:18,225 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:18,380 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:18,386 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,387 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:18,498 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:18,500 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_REM.
+WARNING  | 2025-10-25 09:15:18,552 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:19,111 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:19,186 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:19,393 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:19,497 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:19,703 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:20,354 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:20,624 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:20,628 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type SUBPIECE.
+WARNING  | 2025-10-25 09:15:20,628 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type SUBPIECE.
+WARNING  | 2025-10-25 09:15:20,781 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:21,092 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:21,128 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:21,182 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:21,238 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:21,646 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:21,729 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/2acc0000.elf"
+	User time (seconds): 7.20
+	System time (seconds): 0.31
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 163880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38146
+	Voluntary context switches: 181
+	Involuntary context switches: 671
+	Swaps: 0
+	File system inputs: 2528
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 2acc0000.elf
+
+========================================
+Processing sample 4: 2acc0e2b.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/2acc0e2b.elf
+Project: ghidra_analysis_2acc0e2b.elf_20251025_091523
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1214 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (4108 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_2acc0e2b.elf_20251025_091523 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_2acc0e2b.elf_20251025_091523 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_2acc0e2b.elf_20251025_091523 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/2acc0e2b.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: 68000:BE:32:Coldfire:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/2acc0e2b.elf?MD5=5a40dfa804cd06843c2f1fc2db9fd7a8...
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/2acc0e2b.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/2acc0e2b.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /2acc0e2b.elf (ghidra_analysis_2acc0e2b.elf_20251025_091523:/2acc0e2b.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/2acc0e2b.elf"
+	User time (seconds): 12.08
+	System time (seconds): 0.86
+	Percent of CPU this job got: 139%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 238808
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 83467
+	Voluntary context switches: 5800
+	Involuntary context switches: 7627
+	Swaps: 0
+	File system inputs: 192
+	File system outputs: 4440
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/2acc0e2b.elf
+==================================================
+Loading binary with angr...
+Architecture: 68000:BE:32:default
+Entry point: 0x80000144
+Binary base address: 0x80000000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 374
+Basic blocks (CFG nodes): 5807
+
+Sample functions (first 10):
+  - LinuxLoader @ 0x0
+  - UnresolvableJumpTarget @ 0x4c
+  - UnresolvableCallTarget @ 0x50
+  - sub_80000094 @ 0x80000094
+  - sub_800000a8 @ 0x800000a8
+  - sub_800000f6 @ 0x800000f6
+  - sub_800000fe @ 0x800000fe
+  - sub_8000013c @ 0x8000013c
+  - _start @ 0x80000144
+  - sub_8000016c @ 0x8000016c
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+WARNING  | 2025-10-25 09:15:33,738 | angr.factory   | Creating project with the experimental 'UberEnginePcode' engine
+WARNING  | 2025-10-25 09:15:33,873 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:33,910 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:33,916 | angr.ailment.converter_pcode | Unsupported opcode: CALLOTHER emulation not currently supported
+WARNING  | 2025-10-25 09:15:33,919 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,012 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:34,015 | angr.ailment.converter_pcode | Unsupported opcode: CALLOTHER emulation not currently supported
+WARNING  | 2025-10-25 09:15:34,018 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,084 | angr.analyses.cfg.indirect_jump_resolvers.jumptable | JumpTableResolver does not support P-Code IR yet; CFG may be incomplete.
+WARNING  | 2025-10-25 09:15:34,132 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:34,185 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:34,234 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:34,667 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:34,668 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,669 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,671 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,672 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,674 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,675 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,677 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,678 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:34,807 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:34,885 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:35,009 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:35,015 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:35,016 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_2COMP
+WARNING  | 2025-10-25 09:15:35,141 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:35,143 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type INT_REM.
+WARNING  | 2025-10-25 09:15:35,199 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:35,693 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:35,771 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:35,968 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:36,030 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:36,160 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:36,568 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:36,751 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:36,754 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type SUBPIECE.
+WARNING  | 2025-10-25 09:15:36,755 | angr.ailment.converter_pcode | p-code: Unsupported opcode of type SUBPIECE.
+WARNING  | 2025-10-25 09:15:36,911 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:37,209 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:37,245 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:37,300 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:37,355 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:37,765 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+WARNING  | 2025-10-25 09:15:37,815 | angr.analyses.decompiler.clinic | Inconsistency found during stack pointer tracking. Decompilation results might be incorrect.
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/2acc0e2b.elf"
+	User time (seconds): 6.38
+	System time (seconds): 0.28
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 164288
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38155
+	Voluntary context switches: 1
+	Involuntary context switches: 408
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 2acc0e2b.elf
+
+========================================
+Processing sample 5: 49c5c000.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/49c5c000.elf
+Project: ghidra_analysis_49c5c000.elf_20251025_091539
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1583 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (5074 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_49c5c000.elf_20251025_091539 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_49c5c000.elf_20251025_091539 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_49c5c000.elf_20251025_091539 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/49c5c000.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: MIPS:BE:32:default:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/49c5c000.elf?MD5=0b15a43d839b67959362e36cb503f814...
+Skipping PT_LOAD segment[1, Loadable segment] with invalid file offset
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/49c5c000.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/49c5c000.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /49c5c000.elf (ghidra_analysis_49c5c000.elf_20251025_091539:/49c5c000.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/49c5c000.elf"
+	User time (seconds): 14.54
+	System time (seconds): 1.02
+	Percent of CPU this job got: 136%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 244224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 84759
+	Voluntary context switches: 6421
+	Involuntary context switches: 9844
+	Swaps: 0
+	File system inputs: 1240
+	File system outputs: 4328
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/49c5c000.elf
+==================================================
+Loading binary with angr...
+Architecture: MIPS32
+Entry point: 0x108c68
+Binary base address: 0x100000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 70
+Basic blocks (CFG nodes): 241
+
+Sample functions (first 10):
+  - sub_100004 @ 0x100004
+  - sub_100020 @ 0x100020
+  - sub_100024 @ 0x100024
+  - sub_100050 @ 0x100050
+  - sub_100094 @ 0x100094
+  - sub_1000a8 @ 0x1000a8
+  - sub_1000c4 @ 0x1000c4
+  - sub_1000dc @ 0x1000dc
+  - sub_100104 @ 0x100104
+  - sub_100128 @ 0x100128
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+WARNING  | 2025-10-25 09:15:52,092 | cle.backends.elf.elf | Segment PT_LOAD is empty at 0x45cf80!
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/49c5c000.elf"
+	User time (seconds): 2.15
+	System time (seconds): 0.23
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 106628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 22680
+	Voluntary context switches: 8
+	Involuntary context switches: 360
+	Swaps: 0
+	File system inputs: 1208
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 49c5c000.elf
+
+========================================
+Processing sample 6: 49c5c4e8.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/49c5c4e8.elf
+Project: ghidra_analysis_49c5c4e8.elf_20251025_091553
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1347 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (4185 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_49c5c4e8.elf_20251025_091553 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_49c5c4e8.elf_20251025_091553 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_49c5c4e8.elf_20251025_091553 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/49c5c4e8.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: MIPS:BE:32:default:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/49c5c4e8.elf?MD5=0b15a43d839b67959362e36cb503f814...
+Skipping PT_LOAD segment[1, Loadable segment] with invalid file offset
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/49c5c4e8.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/49c5c4e8.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /49c5c4e8.elf (ghidra_analysis_49c5c4e8.elf_20251025_091553:/49c5c4e8.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/49c5c4e8.elf"
+	User time (seconds): 12.71
+	System time (seconds): 0.94
+	Percent of CPU this job got: 143%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 233752
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 81996
+	Voluntary context switches: 6261
+	Involuntary context switches: 8136
+	Swaps: 0
+	File system inputs: 88
+	File system outputs: 4184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/49c5c4e8.elf
+==================================================
+Loading binary with angr...
+Architecture: MIPS32
+Entry point: 0x108c68
+Binary base address: 0x100000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 70
+Basic blocks (CFG nodes): 241
+
+Sample functions (first 10):
+  - sub_100004 @ 0x100004
+  - sub_100020 @ 0x100020
+  - sub_100024 @ 0x100024
+  - sub_100050 @ 0x100050
+  - sub_100094 @ 0x100094
+  - sub_1000a8 @ 0x1000a8
+  - sub_1000c4 @ 0x1000c4
+  - sub_1000dc @ 0x1000dc
+  - sub_100104 @ 0x100104
+  - sub_100128 @ 0x100128
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+WARNING  | 2025-10-25 09:16:03,903 | cle.backends.elf.elf | Segment PT_LOAD is empty at 0x45cf80!
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/49c5c4e8.elf"
+	User time (seconds): 2.13
+	System time (seconds): 0.17
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 106624
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22675
+	Voluntary context switches: 1
+	Involuntary context switches: 112
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 49c5c4e8.elf
+
+========================================
+Processing sample 7: 598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf
+Project: ghidra_analysis_598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf_20251025_091605
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1158 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (3862 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf_20251025_091605 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf_20251025_091605 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf_20251025_091605 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: ARM:LE:32:v8:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf?MD5=b47536f785cd1ad04f97c812af297b03...
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf (ghidra_analysis_598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf_20251025_091605:/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf"
+	User time (seconds): 15.32
+	System time (seconds): 1.07
+	Percent of CPU this job got: 143%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 286820
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 95537
+	Voluntary context switches: 7378
+	Involuntary context switches: 9403
+	Swaps: 0
+	File system inputs: 184
+	File system outputs: 4880
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf
+==================================================
+Loading binary with angr...
+Architecture: ARMEL
+Entry point: 0x8190
+Binary base address: 0x8000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 329
+Basic blocks (CFG nodes): 4297
+
+Sample functions (first 10):
+  - sub_8094 @ 0x8094
+  - sub_80b0 @ 0x80b0
+  - sub_8128 @ 0x8128
+  - sub_8130 @ 0x8130
+  - sub_8188 @ 0x8188
+  - _start @ 0x8190
+  - sub_81bc @ 0x81bc
+  - sub_81cc @ 0x81cc
+  - sub_a16c @ 0xa16c
+  - sub_a1d0 @ 0xa1d0
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf"
+	User time (seconds): 5.32
+	System time (seconds): 0.26
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 159264
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35260
+	Voluntary context switches: 2
+	Involuntary context switches: 242
+	Swaps: 0
+	File system inputs: 8
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 598e77743e021ab43d4f7038d6f8654d93768469bb2e0a2b92c6c705204ae613.elf
+
+========================================
+Processing sample 8: 598e7774.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/598e7774.elf
+Project: ghidra_analysis_598e7774.elf_20251025_091622
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (2023 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (5849 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_598e7774.elf_20251025_091622 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_598e7774.elf_20251025_091622 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_598e7774.elf_20251025_091622 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/598e7774.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: ARM:LE:32:v8:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/598e7774.elf?MD5=b47536f785cd1ad04f97c812af297b03...
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/598e7774.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/598e7774.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /598e7774.elf (ghidra_analysis_598e7774.elf_20251025_091622:/598e7774.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/598e7774.elf"
+	User time (seconds): 21.69
+	System time (seconds): 1.44
+	Percent of CPU this job got: 140%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:16.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 287216
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 95905
+	Voluntary context switches: 7511
+	Involuntary context switches: 11776
+	Swaps: 0
+	File system inputs: 184
+	File system outputs: 4792
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/598e7774.elf
+==================================================
+Loading binary with angr...
+Architecture: ARMEL
+Entry point: 0x8190
+Binary base address: 0x8000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 329
+Basic blocks (CFG nodes): 4297
+
+Sample functions (first 10):
+  - sub_8094 @ 0x8094
+  - sub_80b0 @ 0x80b0
+  - sub_8128 @ 0x8128
+  - sub_8130 @ 0x8130
+  - sub_8188 @ 0x8188
+  - _start @ 0x8190
+  - sub_81bc @ 0x81bc
+  - sub_81cc @ 0x81cc
+  - sub_a16c @ 0xa16c
+  - sub_a1d0 @ 0xa1d0
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/598e7774.elf"
+	User time (seconds): 7.55
+	System time (seconds): 0.38
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 159612
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35299
+	Voluntary context switches: 1
+	Involuntary context switches: 314
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 598e7774.elf
+
+========================================
+Processing sample 9: 8bcce000.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/8bcce000.elf
+Project: ghidra_analysis_8bcce000.elf_20251025_091647
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1849 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (5183 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8bcce000.elf_20251025_091647 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8bcce000.elf_20251025_091647 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8bcce000.elf_20251025_091647 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/8bcce000.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: MIPS:BE:32:default:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/8bcce000.elf?MD5=f80faadd92358402a8b51f9eafc75e28...
+Skipping section [.mdebug.abi32] with invalid size 0x0
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/8bcce000.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/8bcce000.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /8bcce000.elf (ghidra_analysis_8bcce000.elf_20251025_091647:/8bcce000.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/8bcce000.elf"
+	User time (seconds): 15.78
+	System time (seconds): 1.22
+	Percent of CPU this job got: 135%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 250716
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 84750
+	Voluntary context switches: 6835
+	Involuntary context switches: 9332
+	Swaps: 0
+	File system inputs: 168
+	File system outputs: 4592
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/8bcce000.elf
+==================================================
+Loading binary with angr...
+Architecture: MIPS32
+Entry point: 0x400260
+Binary base address: 0x400000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 243
+Basic blocks (CFG nodes): 3558
+
+Sample functions (first 10):
+  - sub_400094 @ 0x400094
+  - sub_4000b8 @ 0x4000b8
+  - sub_4000e8 @ 0x4000e8
+  - sub_400120 @ 0x400120
+  - sub_4001dc @ 0x4001dc
+  - _start @ 0x400260
+  - sub_40026c @ 0x40026c
+  - sub_4002d0 @ 0x4002d0
+  - sub_40045c @ 0x40045c
+  - sub_40061c @ 0x40061c
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+WARNING  | 2025-10-25 09:17:01,062 | angr.analyses.cfg.indirect_jump_resolvers.mips_elf_fast | Failed to determine value of register gp for function 0x40026c.
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/8bcce000.elf"
+	User time (seconds): 7.62
+	System time (seconds): 0.31
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.02
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 170560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38245
+	Voluntary context switches: 1
+	Involuntary context switches: 334
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 8bcce000.elf
+
+========================================
+Processing sample 10: 8bcce869.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/8bcce869.elf
+Project: ghidra_analysis_8bcce869.elf_20251025_091707
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1297 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (4165 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8bcce869.elf_20251025_091707 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8bcce869.elf_20251025_091707 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8bcce869.elf_20251025_091707 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/8bcce869.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: MIPS:BE:32:default:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/8bcce869.elf?MD5=f80faadd92358402a8b51f9eafc75e28...
+Skipping section [.mdebug.abi32] with invalid size 0x0
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/8bcce869.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/8bcce869.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /8bcce869.elf (ghidra_analysis_8bcce869.elf_20251025_091707:/8bcce869.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/8bcce869.elf"
+	User time (seconds): 15.48
+	System time (seconds): 1.08
+	Percent of CPU this job got: 142%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 247236
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 84276
+	Voluntary context switches: 6208
+	Involuntary context switches: 9006
+	Swaps: 0
+	File system inputs: 168
+	File system outputs: 4584
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/8bcce869.elf
+==================================================
+Loading binary with angr...
+Architecture: MIPS32
+Entry point: 0x400260
+Binary base address: 0x400000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 243
+Basic blocks (CFG nodes): 3558
+
+Sample functions (first 10):
+  - sub_400094 @ 0x400094
+  - sub_4000b8 @ 0x4000b8
+  - sub_4000e8 @ 0x4000e8
+  - sub_400120 @ 0x400120
+  - sub_4001dc @ 0x4001dc
+  - _start @ 0x400260
+  - sub_40026c @ 0x40026c
+  - sub_4002d0 @ 0x4002d0
+  - sub_40045c @ 0x40045c
+  - sub_40061c @ 0x40061c
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+WARNING  | 2025-10-25 09:17:21,335 | angr.analyses.cfg.indirect_jump_resolvers.mips_elf_fast | Failed to determine value of register gp for function 0x40026c.
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/8bcce869.elf"
+	User time (seconds): 9.79
+	System time (seconds): 0.41
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:10.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 170880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38246
+	Voluntary context switches: 1
+	Involuntary context switches: 443
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 8bcce869.elf
+
+========================================
+Processing sample 11: 8ee4c000.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/8ee4c000.elf
+Project: ghidra_analysis_8ee4c000.elf_20251025_091729
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1593 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (4513 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8ee4c000.elf_20251025_091729 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8ee4c000.elf_20251025_091729 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8ee4c000.elf_20251025_091729 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/8ee4c000.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: PowerPC:BE:32:e500:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/8ee4c000.elf?MD5=9d11c3096e9851c40eea53759df80aa9...
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/8ee4c000.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/8ee4c000.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /8ee4c000.elf (ghidra_analysis_8ee4c000.elf_20251025_091729:/8ee4c000.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/8ee4c000.elf"
+	User time (seconds): 16.02
+	System time (seconds): 1.12
+	Percent of CPU this job got: 141%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 239896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 83622
+	Voluntary context switches: 6309
+	Involuntary context switches: 8850
+	Swaps: 0
+	File system inputs: 1536
+	File system outputs: 4480
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/8ee4c000.elf
+==================================================
+Loading binary with angr...
+Architecture: PPC32
+Entry point: 0x100001f0
+Binary base address: 0x10000000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 298
+Basic blocks (CFG nodes): 5245
+
+Sample functions (first 10):
+  - sub_10000094 @ 0x10000094
+  - sub_100000b8 @ 0x100000b8
+  - sub_1000014c @ 0x1000014c
+  - sub_10000168 @ 0x10000168
+  - sub_100001d4 @ 0x100001d4
+  - _start @ 0x100001f0
+  - sub_10000238 @ 0x10000238
+  - sub_1000026c @ 0x1000026c
+  - sub_100002cc @ 0x100002cc
+  - sub_10000310 @ 0x10000310
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/8ee4c000.elf"
+	User time (seconds): 4.72
+	System time (seconds): 0.28
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 138052
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 30457
+	Voluntary context switches: 7
+	Involuntary context switches: 336
+	Swaps: 0
+	File system inputs: 1400
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 8ee4c000.elf
+
+========================================
+Processing sample 12: 8ee4cb90.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/8ee4cb90.elf
+Project: ghidra_analysis_8ee4cb90.elf_20251025_091747
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1310 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (5124 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8ee4cb90.elf_20251025_091747 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8ee4cb90.elf_20251025_091747 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_8ee4cb90.elf_20251025_091747 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/8ee4cb90.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: PowerPC:BE:32:e500:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/8ee4cb90.elf?MD5=9d11c3096e9851c40eea53759df80aa9...
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/8ee4cb90.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/8ee4cb90.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /8ee4cb90.elf (ghidra_analysis_8ee4cb90.elf_20251025_091747:/8ee4cb90.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/8ee4cb90.elf"
+	User time (seconds): 14.37
+	System time (seconds): 1.06
+	Percent of CPU this job got: 131%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 247932
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 84351
+	Voluntary context switches: 6725
+	Involuntary context switches: 9608
+	Swaps: 0
+	File system inputs: 168
+	File system outputs: 4472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/8ee4cb90.elf
+==================================================
+Loading binary with angr...
+Architecture: PPC32
+Entry point: 0x100001f0
+Binary base address: 0x10000000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 298
+Basic blocks (CFG nodes): 5245
+
+Sample functions (first 10):
+  - sub_10000094 @ 0x10000094
+  - sub_100000b8 @ 0x100000b8
+  - sub_1000014c @ 0x1000014c
+  - sub_10000168 @ 0x10000168
+  - sub_100001d4 @ 0x100001d4
+  - _start @ 0x100001f0
+  - sub_10000238 @ 0x10000238
+  - sub_1000026c @ 0x1000026c
+  - sub_100002cc @ 0x100002cc
+  - sub_10000310 @ 0x10000310
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/8ee4cb90.elf"
+	User time (seconds): 4.17
+	System time (seconds): 0.22
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 138048
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 30468
+	Voluntary context switches: 1
+	Involuntary context switches: 357
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: 8ee4cb90.elf
+
+========================================
+Processing sample 13: aefc579c.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/aefc579c.elf
+Project: ghidra_analysis_aefc579c.elf_20251025_091803
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1826 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (4561 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_aefc579c.elf_20251025_091803 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_aefc579c.elf_20251025_091803 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_aefc579c.elf_20251025_091803 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/aefc579c.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: ARM:LE:32:v8:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/aefc579c.elf?MD5=ec6f45a349152583fbe5be66cbfcbf52...
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/aefc579c.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/aefc579c.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /aefc579c.elf (ghidra_analysis_aefc579c.elf_20251025_091803:/aefc579c.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/aefc579c.elf"
+	User time (seconds): 14.54
+	System time (seconds): 0.98
+	Percent of CPU this job got: 137%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 261028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 87884
+	Voluntary context switches: 6464
+	Involuntary context switches: 9090
+	Swaps: 0
+	File system inputs: 376
+	File system outputs: 4728
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/aefc579c.elf
+==================================================
+Loading binary with angr...
+Architecture: ARMEL
+Entry point: 0x8154
+Binary base address: 0x8000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 855
+Basic blocks (CFG nodes): 8839
+
+Sample functions (first 10):
+  - sub_8094 @ 0x8094
+  - sub_80b0 @ 0x80b0
+  - sub_80f4 @ 0x80f4
+  - _start @ 0x8154
+  - sub_8180 @ 0x8180
+  - sub_8190 @ 0x8190
+  - sub_81ec @ 0x81ec
+  - sub_82ec @ 0x82ec
+  - sub_8358 @ 0x8358
+  - sub_83c8 @ 0x83c8
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/aefc579c.elf"
+	User time (seconds): 14.83
+	System time (seconds): 0.36
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 204676
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 46651
+	Voluntary context switches: 1
+	Involuntary context switches: 481
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: aefc579c.elf
+
+========================================
+Processing sample 14: e0bbae01.elf
+========================================
+
+--- Ghidra P-code Analysis ---
+
+==========================================
+Ghidra Headless Analysis
+==========================================
+Binary:  /home/analyst/ir-analyse/samples/malware/e0bbae01.elf
+Project: ghidra_analysis_e0bbae01.elf_20251025_091830
+Location: ./ghidra_projects
+==========================================
+INFO  Using log config file: jar:file:/home/analyst/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/analyst/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1112 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (3725 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/analyst/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/DATA/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Base/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Jython/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/PDB/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/JVM/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/PIC/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Processors/8051/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/analyst/ghidra/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating temporary project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_e0bbae01.elf_20251025_091830 (HeadlessAnalyzer)  
+INFO  Creating project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_e0bbae01.elf_20251025_091830 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/analyst/ir-analyse/./ghidra_projects/ghidra_analysis_e0bbae01.elf_20251025_091830 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/analyst/ir-analyse/samples/malware/e0bbae01.elf (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: x86:LE:64:default:gcc (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib/x86_64-linux-gnu/jni, /usr/lib/x86_64-linux-gnu, /usr/lib/jni] (AutoImporter)  
+INFO  Additional info:
+Loading file:///home/analyst/ir-analyse/samples/malware/e0bbae01.elf?MD5=8f4a2e130386300c412059a1fb146139...
+Setting block .tdata to read-only
+Setting block .init_array to read-only
+Setting block .fini_array to read-only
+Setting block .data.rel.ro to read-only
+------------------------------------------------
+
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/analyst/ir-analyse/samples/malware/e0bbae01.elf (HeadlessAnalyzer)  
+ERROR REPORT: Analysis timed out at 0 seconds. Processing not completed for file: file:///home/analyst/ir-analyse/samples/malware/e0bbae01.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /e0bbae01.elf (ghidra_analysis_e0bbae01.elf_20251025_091830:/e0bbae01.elf) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+==========================================
+Ghidra analysis completed successfully
+==========================================
+Ghidra analysis: SUCCESS
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu122.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu122.04.1, mixed mode)
+	Command being timed: "/home/analyst/ir-analyse/scripts/analyze_ghidra.sh /home/analyst/ir-analyse/samples/malware/e0bbae01.elf"
+	User time (seconds): 19.72
+	System time (seconds): 1.19
+	Percent of CPU this job got: 160%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.99
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 419900
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 129997
+	Voluntary context switches: 8298
+	Involuntary context switches: 10694
+	Swaps: 0
+	File system inputs: 14536
+	File system outputs: 43112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- angr VEX IR Analysis ---
+
+==================================================
+angr VEX IR Analysis
+==================================================
+Binary: /home/analyst/ir-analyse/samples/malware/e0bbae01.elf
+==================================================
+Loading binary with angr...
+Architecture: AMD64
+Entry point: 0x4015b0
+Binary base address: 0x400000
+
+Generating CFG (this will lift code to VEX IR)...
+Functions discovered: 18393
+Basic blocks (CFG nodes): 203056
+
+Sample functions (first 10):
+  - sub_401000 @ 0x401000
+  - sub_401018 @ 0x401018
+  - sub_40101e @ 0x40101e
+  - sub_401020 @ 0x401020
+  - sub_401026 @ 0x401026
+  - sub_401028 @ 0x401028
+  - sub_40102e @ 0x40102e
+  - sub_401030 @ 0x401030
+  - sub_401036 @ 0x401036
+  - sub_401038 @ 0x401038
+==================================================
+angr analysis completed successfully
+==================================================
+angr analysis: SUCCESS
+ERROR    | 2025-10-25 09:18:50,832 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_CPUID_avx2.
+ERROR    | 2025-10-25 09:18:51,598 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_loadF80le.
+ERROR    | 2025-10-25 09:18:51,598 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_storeF80le.
+WARNING  | 2025-10-25 09:20:12,568 | angr.analyses.cfg.indirect_jump_resolvers.jumptable.JumpTableProcessor | Unsupported Binop Iop_ExpCmpNE64.
+ERROR    | 2025-10-25 09:20:12,568 | angr.analyses.cfg.indirect_jump_resolvers.jumptable.JumpTableProcessor | Unsupported Unop Iop_Ctz64.
+ERROR    | 2025-10-25 09:20:12,670 | angr.analyses.cfg.indirect_jump_resolvers.jumptable.JumpTableProcessor | Unsupported Unop Iop_GetMSBs8x16.
+ERROR    | 2025-10-25 09:20:18,108 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_XSAVE_COMPONENT_0.
+ERROR    | 2025-10-25 09:20:18,108 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_XSAVE_COMPONENT_1_EXCLUDING_XMMREGS.
+ERROR    | 2025-10-25 09:20:18,109 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_FINIT.
+ERROR    | 2025-10-25 09:20:18,109 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_XRSTOR_COMPONENT_0.
+ERROR    | 2025-10-25 09:20:18,109 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_XRSTOR_COMPONENT_1_EXCLUDING_XMMREGS.
+WARNING  | 2025-10-25 09:20:38,354 | angr.analyses.cfg.indirect_jump_resolvers.jumptable.JumpTableProcessor | Unsupported Binop Iop_Min8Ux16.
+ERROR    | 2025-10-25 09:20:43,908 | angr.analyses.fcp.fcp.SimEngineFCPVEX | Unsupported Dirty amd64g_dirtyhelper_PCMPxSTRx.
+WARNING  | 2025-10-25 09:21:29,799 | angr.analyses.cfg.cfg_fast | No CFGNode is found for function 0x737c43 in _make_return_edges().
+WARNING  | 2025-10-25 09:21:29,800 | angr.analyses.cfg.cfg_fast | No CFGNode is found for function 0x7393b0 in _make_return_edges().
+WARNING  | 2025-10-25 09:21:29,801 | angr.analyses.cfg.cfg_fast | No CFGNode is found for function 0x73acd3 in _make_return_edges().
+WARNING  | 2025-10-25 09:21:29,802 | angr.analyses.cfg.cfg_fast | No CFGNode is found for function 0x73bb13 in _make_return_edges().
+WARNING  | 2025-10-25 09:21:29,803 | angr.analyses.cfg.cfg_fast | No CFGNode is found for function 0x73cf49 in _make_return_edges().
+WARNING  | 2025-10-25 09:21:29,845 | angr.analyses.cfg.cfg_fast | No CFGNode is found for function 0x756f62 in _make_return_edges().
+	Command being timed: "python3 /home/analyst/ir-analyse/scripts/analyze_angr.py /home/analyst/ir-analyse/samples/malware/e0bbae01.elf"
+	User time (seconds): 170.42
+	System time (seconds): 2.73
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:53.59
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1504992
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 373463
+	Voluntary context switches: 20
+	Involuntary context switches: 4816
+	Swaps: 0
+	File system inputs: 680
+	File system outputs: 48
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Completed: e0bbae01.elf
+
+========================================
+Benchmark Complete
+========================================
+Finished: Sat Oct 25 09:21:37 AM IST 2025
+Samples processed: 14
+Successful analyses: 14
+Failed analyses: 0
+Results saved to: /home/analyst/ir-analyse/results/analysis_results.log
+CSV summary saved to: /home/analyst/ir-analyse/results/summary.csv
+=========================================
