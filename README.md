@@ -133,8 +133,8 @@ The scripts **do not generate** CFG coverage, deobfuscation ratings, or similar 
 ## 11. Troubleshooting tips
 
 - Missing Ghidra? Verify the install path and that `ghidraRun` is executable.
-- Python import errors? Reactivate venv and reinstall angr.
-- BAP not found? Ensure opam is initialized and BAP is installed: `opam install bap && eval $(opam env)`.
+- Python import errors? Reactivate itialized and BAP is installed: `opam install bap && eval $(opam env)`.venv and reinstall angr.
+- BAP not found? Ensure opam is in
 - LLVM not found? Install LLVM toolchain: `sudo apt install llvm` or download from <https://releases.llvm.org/>.
 - Parsing failures? Confirm GNU time output is English and scripts still redirect stdout/stderr to the expected temp files.
 

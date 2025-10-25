@@ -49,7 +49,7 @@ ENABLE_BAP="${ENABLE_BAP:-false}"
 
 # Enable LLVM analysis (set to "true" to enable, "false" or empty to disable)
 # LLVM toolchain must be installed for this to work
-ENABLE_LLVM="${ENABLE_LLVM:-false}"
+ENABLE_LLVM="${ENABLE_LLVM:-true}"
 # ============================================================================
 # SCRIPT SETUP
 # ============================================================================

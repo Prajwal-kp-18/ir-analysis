@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                                                                  ║"
-echo "║           Pre-Commit Security Verification                      ║"
+echo "║           Pre-Commit Security Verification                       ║"
 echo "║                                                                  ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo ""
