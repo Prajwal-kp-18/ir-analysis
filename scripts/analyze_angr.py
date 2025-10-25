@@ -51,19 +51,60 @@ def analyze_binary(binary_path):
         print(f"Binary base address: {hex(project.loader.main_object.min_addr)}")
         
         # Get the Control Flow Graph (CFG) - this triggers IR lifting
-        print("\nGenerating CFG (this will lift code to VEX IR)...")
+        print("\nGenerating CFG with angr...")
         cfg = project.analyses.CFGFast()
         
-        # Count functions discovered
-        function_count = len(cfg.functions)
-        print(f"Functions discovered: {function_count}")
+        # Extract CFG metrics
+        num_functions = len(cfg.kb.functions)
+        num_nodes = len(cfg.graph.nodes())  # Basic Blocks
+        num_edges = len(cfg.graph.edges())  # Control flow edges
         
-        # Count basic blocks
-        node_count = len(cfg.graph.nodes())
-        print(f"Basic blocks (CFG nodes): {node_count}")
+        print(f"Functions discovered: {num_functions}")
+        print(f"Basic blocks (CFG nodes): {num_nodes}")
+        print(f"CFG edges: {num_edges}")
+        
+        # Count total VEX statements across all basic blocks
+        print("\nCounting VEX IR statements...")
+        total_vex_statements = 0
+        processed_blocks = set()  # Track processed blocks to avoid double-counting
+        
+        for func_addr, func in cfg.kb.functions.items():
+            try:
+                # Iterate through basic blocks in this function
+                for block_node in func.graph.nodes():
+                    block_addr = block_node.addr
+                    
+                    # Skip if already processed
+                    if block_addr in processed_blocks:
+                        continue
+                    
+                    processed_blocks.add(block_addr)
+                    
+                    try:
+                        # Get the VEX block
+                        block = project.factory.block(block_addr, size=block_node.size)
+                        if hasattr(block, 'vex') and block.vex is not None:
+                            # Count VEX statements in this block
+                            total_vex_statements += len(block.vex.statements)
+                    except Exception as block_error:
+                        # Skip blocks that fail to lift
+                        pass
+            except Exception as func_error:
+                # Skip functions that cause errors
+                pass
+        
+        print(f"Total VEX statements: {total_vex_statements}")
+        
+        # Print parseable CFG statistics for automated collection
+        print("\n--- angr CFG & IR Stats ---")
+        print(f"ANGR_STATS:Functions={num_functions}")
+        print(f"ANGR_STATS:Nodes={num_nodes}")
+        print(f"ANGR_STATS:Edges={num_edges}")
+        print(f"ANGR_STATS:TotalVexStatements={total_vex_statements}")
+        print("---------------------------")
         
         # Optional: Show some function names
-        if function_count > 0:
+        if num_functions > 0:
             print("\nSample functions (first 10):")
             for i, (addr, func) in enumerate(list(cfg.functions.items())[:10]):
                 func_name = func.name if func.name else f"sub_{hex(addr)}"

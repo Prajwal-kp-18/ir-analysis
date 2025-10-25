@@ -17,6 +17,10 @@ GHIDRA_INSTALL_DIR="/home/analyst/ghidra"
 # These projects are used for headless analysis and can be cleaned up afterward
 GHIDRA_PROJECT_DIR="./ghidra_projects"
 
+# Path to the CFG statistics post-script
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+POST_SCRIPT_PATH="$SCRIPT_DIR/get_cfg_stats.py"
+
 # ============================================================================
 # INPUT VALIDATION
 # ============================================================================
@@ -51,6 +55,13 @@ if [ ! -x "$HEADLESS_CMD" ]; then
     exit 1
 fi
 
+# Verify that the post-script exists
+if [ ! -f "$POST_SCRIPT_PATH" ]; then
+    echo "ERROR: CFG statistics post-script not found at: $POST_SCRIPT_PATH" >&2
+    echo "Please ensure get_cfg_stats.py exists in the scripts directory" >&2
+    exit 1
+fi
+
 # ============================================================================
 # SETUP
 # ============================================================================
@@ -81,14 +92,15 @@ echo "=========================================="
 #   $PROJECT_NAME       - name of the project
 #   -import             - import the binary
 #   -analysisTimeoutPerFile - timeout in seconds (0 = no timeout)
-#   -scriptPath         - (optional) path to custom scripts
-#   -postScript         - (optional) script to run after analysis
+#   -postScript         - script to run after analysis (extracts CFG stats)
+#   -deleteProject      - clean up project after analysis
 
 "$HEADLESS_CMD" \
     "$GHIDRA_PROJECT_DIR" \
     "$PROJECT_NAME" \
     -import "$BINARY_PATH" \
     -analysisTimeoutPerFile 0 \
+    -postScript "$POST_SCRIPT_PATH" \
     -deleteProject
 
 # Capture exit status

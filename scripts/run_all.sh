@@ -285,12 +285,13 @@ for SAMPLE in "$SAMPLES_DIR"/*; do
     echo "--- Ghidra P-code Analysis ---" | tee -a "$LOG_FILE"
     echo "" | tee -a "$LOG_FILE"
     
-    # Create temporary file for time output
+    # Create temporary files for time output and stdout
     GHIDRA_TIME_FILE="$RESULTS_DIR/.time_ghidra_${SAMPLE_NAME}_$$.tmp"
+    GHIDRA_STDOUT_FILE="$RESULTS_DIR/.stdout_ghidra_${SAMPLE_NAME}_$$.tmp"
     
     # Run Ghidra analysis with time measurement
-    # Redirect stdout to log, stderr (time output) to temp file
-    if /usr/bin/time -v "$GHIDRA_SCRIPT" "$SAMPLE" 2> "$GHIDRA_TIME_FILE" >> "$LOG_FILE"; then
+    # Redirect stdout to temp file, stderr (time output) to time file
+    if /usr/bin/time -v "$GHIDRA_SCRIPT" "$SAMPLE" > "$GHIDRA_STDOUT_FILE" 2> "$GHIDRA_TIME_FILE"; then
         echo "Ghidra analysis: SUCCESS" | tee -a "$LOG_FILE"
         GHIDRA_STATUS="success"
     else
@@ -299,8 +300,18 @@ for SAMPLE in "$SAMPLES_DIR"/*; do
         FAILURE_COUNT=$((FAILURE_COUNT + 1))
     fi
     
-    # Append time output to log file
-    cat "$GHIDRA_TIME_FILE" >> "$LOG_FILE"
+    # Append stdout to log file
+    cat "$GHIDRA_STDOUT_FILE" >> "$LOG_FILE"
+    
+    # Extract and log CFG statistics
+    echo "" >> "$LOG_FILE"
+    echo "Ghidra CFG Stats:" >> "$LOG_FILE"
+    grep "GHIDRA_STATS:" "$GHIDRA_STDOUT_FILE" >> "$LOG_FILE" 2>/dev/null || echo "  (CFG stats not available)" >> "$LOG_FILE"
+    
+    # Extract and log performance metrics
+    echo "" >> "$LOG_FILE"
+    echo "Ghidra Performance:" >> "$LOG_FILE"
+    grep -E 'Elapsed \(wall clock\) time|Maximum resident set size' "$GHIDRA_TIME_FILE" >> "$LOG_FILE"
     
     # Parse metrics from time output
     GHIDRA_METRICS=$(parse_time_output "$GHIDRA_TIME_FILE")
@@ -308,8 +319,8 @@ for SAMPLE in "$SAMPLES_DIR"/*; do
     # Write to CSV
     echo "$SAMPLE_NAME,ghidra,$GHIDRA_METRICS,$GHIDRA_STATUS" >> "$CSV_FILE"
     
-    # Clean up temp file
-    rm -f "$GHIDRA_TIME_FILE"
+    # Clean up temp files
+    rm -f "$GHIDRA_TIME_FILE" "$GHIDRA_STDOUT_FILE"
     
     # ------------------------------------------------------------------------
     # angr Analysis
@@ -319,12 +330,13 @@ for SAMPLE in "$SAMPLES_DIR"/*; do
     echo "--- angr VEX IR Analysis ---" | tee -a "$LOG_FILE"
     echo "" | tee -a "$LOG_FILE"
     
-    # Create temporary file for time output
+    # Create temporary files for time output and stdout
     ANGR_TIME_FILE="$RESULTS_DIR/.time_angr_${SAMPLE_NAME}_$$.tmp"
+    ANGR_STDOUT_FILE="$RESULTS_DIR/.stdout_angr_${SAMPLE_NAME}_$$.tmp"
     
     # Run angr analysis with time measurement
-    # Redirect stdout to log, stderr (time output) to temp file
-    if /usr/bin/time -v python3 "$ANGR_SCRIPT" "$SAMPLE" 2> "$ANGR_TIME_FILE" >> "$LOG_FILE"; then
+    # Redirect stdout to temp file, stderr (time output) to time file
+    if /usr/bin/time -v python3 "$ANGR_SCRIPT" "$SAMPLE" > "$ANGR_STDOUT_FILE" 2> "$ANGR_TIME_FILE"; then
         echo "angr analysis: SUCCESS" | tee -a "$LOG_FILE"
         ANGR_STATUS="success"
         SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
@@ -334,8 +346,18 @@ for SAMPLE in "$SAMPLES_DIR"/*; do
         FAILURE_COUNT=$((FAILURE_COUNT + 1))
     fi
     
-    # Append time output to log file
-    cat "$ANGR_TIME_FILE" >> "$LOG_FILE"
+    # Append stdout to log file
+    cat "$ANGR_STDOUT_FILE" >> "$LOG_FILE"
+    
+    # Extract and log CFG statistics
+    echo "" >> "$LOG_FILE"
+    echo "angr CFG Stats:" >> "$LOG_FILE"
+    grep "ANGR_STATS:" "$ANGR_STDOUT_FILE" >> "$LOG_FILE" 2>/dev/null || echo "  (CFG stats not available)" >> "$LOG_FILE"
+    
+    # Extract and log performance metrics
+    echo "" >> "$LOG_FILE"
+    echo "angr Performance:" >> "$LOG_FILE"
+    grep -E 'Elapsed \(wall clock\) time|Maximum resident set size' "$ANGR_TIME_FILE" >> "$LOG_FILE"
     
     # Parse metrics from time output
     ANGR_METRICS=$(parse_time_output "$ANGR_TIME_FILE")
@@ -343,8 +365,8 @@ for SAMPLE in "$SAMPLES_DIR"/*; do
     # Write to CSV
     echo "$SAMPLE_NAME,angr,$ANGR_METRICS,$ANGR_STATUS" >> "$CSV_FILE"
     
-    # Clean up temp file
-    rm -f "$ANGR_TIME_FILE"
+    # Clean up temp files
+    rm -f "$ANGR_TIME_FILE" "$ANGR_STDOUT_FILE"
     
     # ------------------------------------------------------------------------
     # BAP Analysis (if enabled)
