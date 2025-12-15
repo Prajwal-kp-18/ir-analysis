@@ -33,10 +33,10 @@ Thumbs.db
 *.lock
 
 # Results (keep directory structure but ignore logs)
-results/*.log
-results/*.csv
-results/*.md
-!results/README.md
+# results/*.log
+# results/*.csv
+# results/*.md
+# !results/README.md
 
 # Samples - ignore actual malware but keep benign samples
 samples/malware/
