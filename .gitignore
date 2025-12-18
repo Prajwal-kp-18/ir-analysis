@@ -46,6 +46,7 @@ samples/*.dll
 samples/*.so
 !samples/benign/
 
+malware/
 # Temporary files
 *.tmp
 *.temp

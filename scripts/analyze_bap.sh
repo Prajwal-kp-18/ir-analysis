@@ -14,9 +14,9 @@
 # CONFIGURATION BLOCK - Edit these paths to match your setup
 # ============================================================================
 
-# BAP command (usually 'bap' if installed via opam)
-# If you need a specific path, set it here
-BAP_CMD="${BAP_CMD:-bap}"
+# BAP command - use Docker by default
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BAP_CMD="${BAP_CMD:-${SCRIPT_DIR}/bap_docker.sh}"
 
 # ============================================================================
 # INPUT VALIDATION
@@ -42,13 +42,12 @@ fi
 # ============================================================================
 
 # Verify that bap command is available
-if ! command -v "$BAP_CMD" &> /dev/null; then
-    echo "ERROR: BAP command not found: $BAP_CMD" >&2
-    echo "Please install BAP using opam:" >&2
-    echo "  1. Install opam: sudo apt install opam" >&2
-    echo "  2. Initialize opam: opam init" >&2
-    echo "  3. Install BAP: opam install bap" >&2
-    echo "  4. Ensure bap is in your PATH" >&2
+if [ ! -x "$BAP_CMD" ]; then
+    echo "ERROR: BAP command not found or not executable: $BAP_CMD" >&2
+    echo "Please ensure Docker is installed:" >&2
+    echo "  docker --version" >&2
+    echo "And pull the BAP Docker image:" >&2
+    echo "  docker pull binaryanalysisplatform/bap:latest" >&2
     exit 1
 fi
 
@@ -92,7 +91,9 @@ echo ""
 # Create temporary file for output
 BAP_OUT=$(mktemp)
 
-"$BAP_CMD" "$BINARY_PATH" -d bil > "$BAP_OUT"
+# Use timeout to prevent hanging (default 60 seconds, can be overridden by BAP_TIMEOUT env var)
+BAP_TIMEOUT="${BAP_TIMEOUT:-60}"
+timeout "${BAP_TIMEOUT}s" "$BAP_CMD" "$BINARY_PATH" -d bil > "$BAP_OUT" 2>&1
 EXIT_STATUS=$?
 
 if [ $EXIT_STATUS -eq 0 ]; then
@@ -128,7 +129,11 @@ rm -f "$BAP_OUT"
 # ERROR HANDLING
 # ============================================================================
 
-if [ $EXIT_STATUS -ne 0 ]; then
+if [ $EXIT_STATUS -eq 124 ]; then
+    echo "" >&2
+    echo "ERROR: BAP analysis timed out after ${BAP_TIMEOUT} seconds" >&2
+    exit 124
+elif [ $EXIT_STATUS -ne 0 ]; then
     echo "" >&2
     echo "ERROR: BAP analysis failed with exit code $EXIT_STATUS" >&2
     exit 1

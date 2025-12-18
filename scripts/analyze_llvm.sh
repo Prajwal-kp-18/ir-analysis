@@ -119,30 +119,42 @@ else
         LLVM_IR_FILE="${BINARY_PATH}.ll"
         
         if [ "$LIFTER_TYPE" = "retdec" ]; then
-            # RetDec usage: retdec-decompiler input_file
-            # It generates input_file.ll automatically
-            "$LIFTER_CMD" "$BINARY_PATH"
-            # RetDec might generate .ll or .c depending on config, but usually .ll is intermediate
-            # Actually RetDec produces .c by default, but keeps .ll if configured or in temp
-            # Let's assume standard behavior or check for generated .ll
+            # RetDec generates: .bc (LLVM bitcode), .ll (LLVM IR), .c (C code), .dsm (disassembly)
+            echo "Running RetDec decompiler..."
+            "$LIFTER_CMD" "$BINARY_PATH" 2>&1 | grep -v "^\s*$" | head -20
             
-            # If RetDec generates .ll, it's usually named <binary>.ll
-            if [ -f "$LLVM_IR_FILE" ]; then
-                cat "$LLVM_IR_FILE"
+            LLVM_BC_FILE="${BINARY_PATH}.bc"
+            LLVM_IR_FILE="${BINARY_PATH}.ll"
+            
+            # RetDec already generates .ll file directly
+            if [ -f "$LLVM_IR_FILE" ] && [ -f "$LLVM_BC_FILE" ]; then
+                echo ""
+                echo "Found LLVM IR file: $LLVM_IR_FILE"
+                echo "Analyzing LLVM IR structure..."
                 
-                # Count stats
-                NUM_INSTR=$(grep -cE "^[[:space:]]*[a-z]+" "$LLVM_IR_FILE")
+                # Count functions (lines starting with "define")
+                NUM_FUNCTIONS=$(grep -c "^define " "$LLVM_IR_FILE" || echo "0")
+                
+                # Count basic blocks (labels in LLVM IR end with :)
+                NUM_BLOCKS=$(grep -cE "^[a-zA-Z0-9_]+:\s*$" "$LLVM_IR_FILE" || echo "0")
+                
+                # Count LLVM instructions (lines with assignments or known instructions)
+                NUM_INSTR=$(grep -cE "^\s*(%.* = |  (store|load|call|br|ret|add|sub|mul|icmp|getelementptr|alloca|bitcast|phi|select|switch|and|or|xor|shl|lshr|ashr|fadd|fsub|fmul|fdiv|fcmp|extractvalue|insertvalue|extractelement|insertelement))" "$LLVM_IR_FILE" || echo "0")
+                
                 echo ""
                 echo "--- LLVM IR Stats ---"
-                echo "LLVM_STATS:Functions=0" # Placeholder
-                echo "LLVM_STATS:BasicBlocks=0" # Placeholder
+                echo "LLVM_STATS:Functions=$NUM_FUNCTIONS"
+                echo "LLVM_STATS:BasicBlocks=$NUM_BLOCKS"
                 echo "LLVM_STATS:TotalLlvmInstructions=$NUM_INSTR"
                 echo "---------------------"
                 
-                rm -f "$LLVM_IR_FILE"
+                # Cleanup temporary files
+                rm -f "$LLVM_IR_FILE" "$LLVM_BC_FILE" "${BINARY_PATH}.c" "${BINARY_PATH}.dsm" "${BINARY_PATH}.config.json"
                 EXIT_STATUS=0
             else
-                echo "WARNING: RetDec ran but no .ll file found."
+                echo "ERROR: RetDec did not generate IR files"
+                echo "Expected .bc at: $LLVM_BC_FILE"
+                echo "Expected .ll at: $LLVM_IR_FILE"
                 EXIT_STATUS=1
             fi
             

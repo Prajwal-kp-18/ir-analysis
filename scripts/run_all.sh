@@ -27,11 +27,12 @@
 
 # Directory containing the binary samples to analyze
 # Default: samples/benign/ relative to project root
+# In single-file mode, we'll override this after argument parsing
 SAMPLES_DIR="${SAMPLES_DIR:-$(dirname "$(dirname "$(readlink -f "$0")")")/samples/malware}"
 
 # Directory where results and logs will be written
-# Default: results/ relative to project root
-RESULTS_DIR="${RESULTS_DIR:-$(dirname "$(dirname "$(readlink -f "$0")")")/results}"
+# Default: results/ relative to project root  
+RESULTS_DIR="${RESULTS_DIR:-$(dirname "$(dirname "$(readlink -f "$0")")")/results/malware}"
 
 # Output log file name (will be created in RESULTS_DIR)
 OUTPUT_LOG="${OUTPUT_LOG:-analysis_results.log}"
@@ -41,7 +42,7 @@ CSV_SUMMARY="${CSV_SUMMARY:-summary.csv}"
 
 # Path to Ghidra installation (required by analyze_ghidra.sh)
 # This can also be set as an environment variable before running this script
-GHIDRA_INSTALL_DIR="${GHIDRA_INSTALL_DIR:-/home/analyst/ghidra}"
+GHIDRA_INSTALL_DIR="${GHIDRA_INSTALL_DIR:-/opt/ghidra}"
 
 # Enable BAP analysis (set to "true" to enable, "false" or empty to disable)
 # BAP must be installed via opam for this to work
@@ -50,9 +51,23 @@ ENABLE_BAP="${ENABLE_BAP:-false}"
 # Enable LLVM analysis (set to "true" to enable, "false" or empty to disable)
 # LLVM toolchain must be installed for this to work
 ENABLE_LLVM="${ENABLE_LLVM:-true}"
+
+# Timeout for each individual tool analysis (in seconds)
+# Set to 0 to disable timeout
+TIMEOUT_SECONDS="${TIMEOUT_SECONDS:-3600}"
 # ============================================================================
 # SCRIPT SETUP
 # ============================================================================
+
+# Check for single-file mode first
+SINGLE_FILE_MODE=false
+SINGLE_FILE_PATH=""
+if [ "$1" = "--single" ] && [ -n "$2" ]; then
+    SINGLE_FILE_MODE=true
+    SINGLE_FILE_PATH="$2"
+    # Override SAMPLES_DIR to parent directory of the file
+    SAMPLES_DIR="$(dirname "$SINGLE_FILE_PATH")"
+fi
 
 # Get the directory where this script is located
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -166,12 +181,16 @@ fi
 
 # Check if BAP is available (if enabled)
 if [ "$ENABLE_BAP" = "true" ]; then
-    if ! command -v bap &> /dev/null; then
+    # Check for bap_docker.sh wrapper or native bap
+    if [ -x "$SCRIPT_DIR/bap_docker.sh" ]; then
+        echo "Using BAP via Docker wrapper"
+    elif ! command -v bap &> /dev/null; then
         echo "WARNING: BAP is enabled but 'bap' command not found" >&2
-        echo "Please install BAP via opam:" >&2
+        echo "Please install BAP via opam or ensure Docker is available:" >&2
         echo "  1. sudo apt install opam" >&2
         echo "  2. opam init" >&2
         echo "  3. opam install bap" >&2
+        echo "Or ensure bap_docker.sh wrapper exists and Docker image is pulled" >&2
         echo "Or disable BAP by setting ENABLE_BAP=false" >&2
         exit 1
     fi
@@ -208,7 +227,15 @@ echo "" >> "$LOG_FILE"
 
 # Initialize CSV summary file with headers
 # New Schema: Sample_ID,Architecture,Tool,Success_Status,Time_s,Mem_MB,Func_Count,Block_Count,IR_Stmt_Count
-echo "Sample_ID,Architecture,Tool,Success_Status,Time_s,Mem_MB,Func_Count,Block_Count,IR_Stmt_Count" > "$CSV_FILE"
+if [ "$1" = "--single" ]; then
+    # Single file mode: only create header if file doesn't exist
+    if [ ! -f "$CSV_FILE" ]; then
+        echo "Sample_ID,Architecture,Tool,Success_Status,Time_s,Mem_MB,Func_Count,Block_Count,IR_Stmt_Count" > "$CSV_FILE"
+    fi
+else
+    # Normal mode: overwrite with new header
+    echo "Sample_ID,Architecture,Tool,Success_Status,Time_s,Mem_MB,Func_Count,Block_Count,IR_Stmt_Count" > "$CSV_FILE"
+fi
 
 # ============================================================================
 # MAIN ANALYSIS LOOP
@@ -314,7 +341,15 @@ get_architecture() {
 
 # Loop through all files in the samples directory
 # Support recursive search if samples are organized by architecture
-find "$SAMPLES_DIR" -type f | while read -r SAMPLE; do
+if [ "$SINGLE_FILE_MODE" = "true" ]; then
+    # Single file mode: process only the specified file
+    SAMPLE_LIST=("$SINGLE_FILE_PATH")
+else
+    # Normal mode: find all files in SAMPLES_DIR
+    mapfile -t SAMPLE_LIST < <(find "$SAMPLES_DIR" -type f)
+fi
+
+for SAMPLE in "${SAMPLE_LIST[@]}"; do
     SAMPLE_COUNT=$((SAMPLE_COUNT + 1))
     SAMPLE_NAME=$(basename "$SAMPLE")
     ARCH=$(get_architecture "$SAMPLE")
@@ -422,6 +457,8 @@ find "$SAMPLES_DIR" -type f | while read -r SAMPLE; do
         BAP_TIME_FILE="$RESULTS_DIR/.time_bap_${SAMPLE_NAME}_$$.tmp"
         BAP_STDOUT_FILE="$RESULTS_DIR/.stdout_bap_${SAMPLE_NAME}_$$.tmp"
         
+        # Set BAP internal timeout to 60 seconds (per-binary timeout in analyze_bap.sh)
+        export BAP_TIMEOUT=60
         /usr/bin/time -v timeout "${TIMEOUT_SECONDS}s" "$BAP_SCRIPT" "$SAMPLE" > "$BAP_STDOUT_FILE" 2> "$BAP_TIME_FILE"
         EXIT_CODE=$?
         

@@ -1,0 +1,13 @@
+Test_Case_ID,Architecture,Malware_Type,Tool,Semantic_Errors,Total_Checks,Error_Rate (%)
+ILSV_x86_01,x86:LE:64,Bogus Control Flow / ILSV,VEX,0,2,0.00%
+ILSV_x86_01,x86:LE:64,Bogus Control Flow / ILSV,P-code,0,2,0.00%
+Memory_Stack_02,x86:LE:32,Packing/Loader,VEX,1,1,100.00%
+Memory_Stack_02,x86:LE:32,Packing/Loader,P-code,Error,1,N/A
+WannaCry_Entry,x86:LE:32,Real Malware Sample,VEX,0,2,0.00%
+WannaCry_Entry,x86:LE:32,Real Malware Sample,P-code,0,2,0.00%
+Mirai_Entry,ARM:LE:32,Cross-Architecture (ARM),VEX,0,2,0.00%
+Mirai_Entry,ARM:LE:32,Cross-Architecture (ARM),P-code,Error,2,N/A
+Emotet_Entry,x86:LE:32,Control-Flow Flattening (FLA),VEX,0,2,0.00%
+Emotet_Entry,x86:LE:32,Control-Flow Flattening (FLA),P-code,0,2,0.00%
+Petya_Entry,x86:LE:32,Packing & Memory Semantics,VEX,0,2,0.00%
+Petya_Entry,x86:LE:32,Packing & Memory Semantics,P-code,0,2,0.00%

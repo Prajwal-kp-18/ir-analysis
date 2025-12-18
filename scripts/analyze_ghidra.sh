@@ -12,7 +12,7 @@
 
 # Path to your Ghidra installation directory (contains support/, Ghidra/, etc.)
 # Example: /opt/ghidra_10.4_PUBLIC or /home/user/tools/ghidra_11.0
-GHIDRA_INSTALL_DIR="${GHIDRA_INSTALL_DIR:-/home/analyst/ghidra}"
+GHIDRA_INSTALL_DIR="${GHIDRA_INSTALL_DIR:-/opt/ghidra}"
 
 # Directory where temporary Ghidra projects will be created
 # These projects are used for headless analysis and can be cleaned up afterward
@@ -96,7 +96,7 @@ echo "=========================================="
     "$GHIDRA_PROJECT_DIR" \
     "$PROJECT_NAME" \
     -import "$BINARY_PATH" \
-    -analysisTimeoutPerFile 0 \
+    -analysisTimeoutPerFile 3600 \
     -postScript "$POST_SCRIPT_PATH" \
     -deleteProject
 
